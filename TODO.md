@@ -49,4 +49,3 @@ Go 非常适合处理并发的文档解析和向量化任务。
 - 开发环境： 使用 docker-compose 启动 ParadeDB，本地 Go 直接连接宿主机端口开发，效率最高。
 
 - 安全性： 如果你的 Markdown 包含私密技术方案，Embedding 模型建议本地运行（如使用 Ollama 提供的 mxbai-embed-large 或 bge-m3 模型）。
-- 
