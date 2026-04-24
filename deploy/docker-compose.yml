@@ -21,6 +21,8 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
+    networks: 
+      - app-net      
 
   # 可选：pgAdmin 管理 UI，访问 http://localhost:8088
   pgadmin:
@@ -37,8 +39,14 @@ services:
       db:
         condition: service_healthy
     restart: unless-stopped
+    networks: 
+      - app-net
 
 volumes:
   paradedb_data:
   pgadmin_data:
     
+networks: 
+  app-net:
+    external: true    
+
